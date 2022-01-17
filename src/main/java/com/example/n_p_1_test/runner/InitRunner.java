@@ -12,8 +12,8 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-@Component
 @Order(1)
+@Component
 @RequiredArgsConstructor
 public class InitRunner implements ApplicationRunner {
 
@@ -25,6 +25,5 @@ public class InitRunner implements ApplicationRunner {
     public void run(ApplicationArguments args) throws Exception {
         List<User> users = userService.initData();
         bookService.initData(users);
-
     }
 }

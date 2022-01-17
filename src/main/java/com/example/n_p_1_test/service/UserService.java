@@ -19,7 +19,9 @@ public class UserService {
     }
 
     public List<User> initData() {
+
         List<User> users = new ArrayList<>();
+
         for (int i=0; i < 5; i++) {
             users.add(new User(null, "user" + i, "email" + i, null));
         }
